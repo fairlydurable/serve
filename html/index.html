@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Tutorial Services</title>
+                <link rel="stylesheet" href="css/style.css">
+                </head>
+    <body>
+        <header>
+            <h1>Tutorial Services</h1>
+        </header>
+        <p>Expand the way you learn about Temporal with these browser-based inspection and interaction services. These services extend beyond the standard Temporal Server Web UI to support learning and engagement. Crafted specifically for tutorial use, they enable you to explore developer features in a safe and transparent environment. You can run these locally using 'localhost' (127.0.0.1), or host them on your favorite sites or droplets.</p>
+        <main>
+            <section id="services">
+                <a href="/display" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Message Display</h2>
+                        <p>A simple display that updates its Markdown-based content using remote API calls. Perfect for exploring scheduled tasks or providing insight into Workflow state.</p>
+                    </article>
+                </a>
+                <a href="/log" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Action Log</h2>
+                        <p>An API-controlled log, with the newest updates always at the top. Create output external to your Workflows to track information you wouldn't normally see in the Web UI or want to query, such as Activity Retries.</p>
+                    </article>
+                </a>
+                <a href="/human" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Human-in-the-Loop</h2>
+                        <p>Explore how you add human intervention for a Workflow to proceed. This microservice provides a friendly button along with a prompt you set. It can't succeed without direct human interaction.</p>
+                    </article>
+                </a>
+                <a href="/unreliable" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Unreliable Microservice</h2>
+                        <p>Tunes a microserve so its reliability ranges from 0.0 (always fails) to 1.0 (always succeeds). Learn to build activity retry policies using an endpoint whose characteristics you control.</p>
+                    </article>
+                </a>
+                <a href="/chain" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Chain Service</h2>
+                        <p>Explore how a process moves forward by calling an n-stage chain of microservice activities. You set the chain length and timing with API calls. A Mermaid-based graphic shows the progression of your Workflow through the chain as each Activity enters, retries, and succeeds.</p>
+                    </article>
+                </a>
+            </section>
+        </main>
+        <script src="js/script.js"></script>
+    </body>
+</html>
