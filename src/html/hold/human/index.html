@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human-in-the-Loop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        .back-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+       
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+       
+        footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Human-in-the-Loop</h1>
+    </header>
+    <main>
+        <div style="padding-left: 100px; padding-right: 100px;">
+            <section id="presentation">
+                <h1 id="content">Confirm this Action</h1>
+                <center>
+                <button style="background-color: #998FF8; color: #fff; border: none; padding: 10px 100px; max-width: 400px; font-size: 64px; cursor: pointer; border-radius: 5px; margin-bottom: 30px; margin-top: 30px;" onclick="press()">Press Me</button>
+                </center>
+            </section>
+        </div>
+    </main>
+    <footer>        
+        <button style="background-color: #998FF8; color: #fff; border: none; padding: 20px 50px; font-size: 16px; cursor: pointer; border-radius: 5px; margin-bottom: 30px; margin-top: 30px; " onclick="goToMainPage()">Back to Services Page</button>
+    </footer>
+    <script>
+        function press() {
+            alert("Confirmed!");
+        }
+
+        function goToMainPage() {
+            window.location.href = "../index.html";
+        }
+    </script>
+</body>
+</html>

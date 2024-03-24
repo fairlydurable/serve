@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Services</title>
+    <link rel="stylesheet" href="/services/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Tutorial Services</h1>
+        </div>
+    </header>
+    <main>
+        <section class="intro">
+            <p>Expand the way you learn about distributed systems with these browser-based inspection and interaction services. These services support learning and engagement. Crafted specifically for tutorial use, they enable you to explore developer features in a safe and transparent environment. You can run these locally using 'localhost' (127.0.0.1), or host them on your favorite sites or droplets.</p>
+        </section>
+
+            <section id="services">
+                <a href="display/" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Message Display</h2>
+                        <p>A simple billboard display that updates its Markdown-based content using remote API calls. Perfect for exploring scheduled tasks or providing insight into Workflow state.</p>
+                    </article>
+                </a>
+                <a href="log/" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Action Log</h2>
+                        <p>An API-controlled log, with the newest updates always at the top. Create output external to your Workflows to track information you wouldn't normally see in the Web UI or want to query, such as Activity Retries.</p>
+                    </article>
+                </a>
+                <a href="human/" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Human-in-the-Loop</h2>
+                        <p>Explore how you add human intervention for a Workflow to proceed. This microservice provides a friendly button along with a prompt you set. It can't succeed without direct human interaction.</p>
+                    </article>
+                </a>
+                <a href="textentry/" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Human-Sourced Text Entry</h2>
+                        <p>This microservice uses a text entry field with a prompt you set plus a submit/cancel button pair.</p>
+                    </article>
+                </a>
+                <a href="unreliable/" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Unreliable Microservice</h2>
+                        <p>Tunes a microserve so its reliability ranges from 0.0 (always fails) to 1.0 (always succeeds). Learn to build activity retry policies using an endpoint whose characteristics you control. Built around Error 418 ("I'm a teapot") so this is the "coffee" service.</p>
+                    </article>
+                </a>
+                <a href="keyvalue/" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Key-Value Store</h2>
+                        <p>Use get, set, and delete with this simple key-value CRUD database</p>
+                    </article>
+                </a>
+                <a href="chain/" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Chain Service</h2>
+                        <p>Explore how a process moves forward by calling an n-stage chain of microservice activities. You set the base chain length, the delay timing, and update the progress using API calls. An AJAX-driven Mermaid-based graphic shows the progression of your Workflow through the chain as each Activity enters, retries, and succeeds.</p>
+                    </article>
+                </a>
+                <a href="progress/" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Progress Service</h2>
+                        <p>Explore how a process moves forward with arbitrary microservice activities. You add links using API calls. A Mermaid-based graphic shows the progression of your Workflow through the chain as each Activity enters, retries, and succeeds.</p>
+                    </article>
+                </a>
+                <a href="json/" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>JSON Service</h2>
+                        <p>Until otherwise determined, the public domain Pokemon database, supplying JSON-formatted responses</p>
+                    </article>
+                </a>
+                <a href="coinflip/" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Coinflip Service</h2>
+                        <p>Exactly what it says on the package.</p>
+                    </article>
+                </a>
+                <a href="http://146.190.45.234:8080">
+                <!-- a href="passive/" style="text-decoration: none; color: inherit;" -->
+                    <article>
+                        <h2>Passive IP Service</h2>
+                        <p>Retrieves visitor IP to seed a chain that is sent back with AJAX loading. This is the backbone for the Weather service currently hosted at our Digital Ocean droplet, currently linked instead of a page. (http://146.190.45.234:8080)</p>
+                    </article>
+                </a>
+                <a href="mantra/" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Mantra Service</h2>
+                        <p>Similar to the Message Display Service, this service offers a stylized look with the same endpoint behavior. It's to be used with the signals, queries, and schedules samples and has a built-in "mantra" set of daily aphorisms.</p>
+                    </article>
+                </a>
+                <a href="support/" style="text-decoration: none; color: inherit;">
+                    <article>
+                        <h2>Services Support</h2>
+                        <p>How-to details, documentation, and other information about the API endpoints that power these services.</p>
+                    </article>
+                </a>
+            </section>
+            <section class="outro">
+                <p>All services accept standard query values, enabling you to set response conditions from calling apps:
+                <pre>
+                    ?reliablility=value-from-0.0-to-1.0
+                    ?delay=value-in-seconds
+                </pre>
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
+

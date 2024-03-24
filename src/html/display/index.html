@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Display Microservices</title>
+                <link rel="stylesheet" href="/display/style.css">
+                </head>
+    <body>
+        <main>
+            <header>
+            </header>
+            <section class="intro">
+                <div class="header-content">
+                    <h1>Display Service</h1>
+                </div>
+            </section>
+            <section id="features">
+                <article>
+                    <div class="presentation">
+                        <h1 id="content"></h1>
+                    </div>
+                </article>
+            </section>
+            <section class="outro">
+                <center>
+                    <p>All services adjust their response conditions using shared query values:
+                    <pre>?reliablility=value-from-0.0-to-1.0</pre>
+                    <pre>?delay=value-in-seconds</pre>
+                </center>
+            </section>
+        </main>
+        <footer style="background-color: #333">
+            <button style="background-color: #1E4B84; color: #fff; border: none; padding: 20px 50px; font-size: 16px; cursor: pointer; border-radius: 5px; margin-bottom: 30px; margin-top: 30px; " onclick="goToMainPage()">Back to Services Page</button>
+        </footer>
+        <script>
+            function updateContent() {
+                fetch('/display/content.json')
+                .then(function(response) { return response.json(); })
+                .then(function(data) {
+                    var currentContent = document.getElementById('content').innerText;
+                    if (data.content !== currentContent) {
+                        document.getElementById('content').innerText = data.content;
+                    }
+                });
+            }
+
+            updateContent();
+            setInterval(updateContent, 3000);
+
+            function goToMainPage() {
+                window.location.href = "../index.html";
+            }
+        </script>
+    </body>
+</html>

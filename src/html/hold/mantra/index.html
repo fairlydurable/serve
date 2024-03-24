@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/mantra/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantra Service</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+       
+        .back-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+       
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+       
+        footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mantra-for-the-Moment</h1>
+    </header>
+    <main>
+        <div style="padding-left: 100px; padding-right: 100px;">
+            <section id="presentation">
+                <h1 id="content"></h1>
+            </section>
+        </div>
+    </main>
+    <footer>        
+        <button style="background-color: #998FF8; color: #fff; border: none; padding: 20px 50px; font-size: 16px; cursor: pointer; border-radius: 5px; margin-bottom: 20px; margin-top: 30px; " onclick="goToMainPage()">Back to Services Page</button>
+    </footer>
+    <script>
+        function updateContent() {
+            fetch("content.json")
+            .then(function(response) { return response.json(); })
+            .then(function(data) {
+                var currentContent = document.getElementById('content').innerText;
+                if (data.content !== currentContent) {
+                    document.getElementById('content').innerText = data.content;
+                }
+            });
+        }
+
+        updateContent();
+        setInterval(updateContent, 3000);
+
+        function goToMainPage() {
+            window.location.href = "../index.html";
+        }
+    </script>
+</body>
+</html>
