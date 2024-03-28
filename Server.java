@@ -17,7 +17,7 @@ public class Server {
         String host = localhost;
         
         HttpServer server = HttpServer.create(new InetSocketAddress(host, port), 0);
-        server.createContext("/", new StaticFileHandler("./"));
+        server.createContext("/", new StaticFileHandler());
         server.setExecutor(null);
         
         System.out.printf("Server %s:%d\n", host, port);

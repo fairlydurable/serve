@@ -8,11 +8,11 @@ This project uses "make" commands to build and execute the server, and to clean 
 
 ### Project Contents
 
-The project consists of a primary Java source, a src subdirectory with shared resources, a Makefile, and this README.md.
+The project consists of a primary Java source, a src subdirectory with shared code, a site subdirectory with page resources, a Makefile, and this README.md.
 
 ```
 $ ls
-Makefile	README.md	Server.java	src
+Makefile	README.md	Server.java	site/ src/
 ```
 
 ### Build

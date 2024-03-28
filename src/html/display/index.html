@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Display Service</title>
+                <link rel="stylesheet" href="../css/display-style.css">
+                </head>
+    <body>
+        <header>
+            <h1>Display Service</h1>
+        </header>
+        <main>
+            <div style="padding-left: 100px; padding-right: 100px;">
+                <section id="presentation">
+                    <h1 id="content"></h1>
+                </section>
+            </div>
+        </main>
+        <script>
+            function updateContent() {
+                fetch('/html/display/content.json')
+                .then(function(response) { return response.json(); })
+                .then(function(data) {
+                    var currentContent = document.getElementById('content').innerText;
+                    if (data.content !== currentContent) {
+                        document.getElementById('content').innerText = data.content;
+                    }
+                });
+            }
+            
+            updateContent();
+            setInterval(updateContent, 3000);
+        </script>
+    </body>
+</html>
