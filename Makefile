@@ -9,7 +9,7 @@ JAVA_FLAGS := -cp $(OUT_DIR)
 PACKAGE_DIR = .
 PACKAGE := server
 MAIN_CLASS := Server
-MAIN_SOURCE := $(MAIN_CLASS).java
+MAIN_SOURCE := src/$(MAIN_CLASS).java
 ADDITIONAL_SOURCES := src/*.java
 
 

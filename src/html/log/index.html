@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display Service</title>
+    <title>Log Service</title>
     <link rel="stylesheet" href="style.css">
     <style>
        
@@ -37,7 +37,7 @@
 </head>
 <body>
     <header>
-        <h1>Display Service</h1>
+        <h1>Log Service</h1>
     </header>
     <main>
         <div style="padding-left: 100px; padding-right: 100px;">
@@ -54,9 +54,9 @@
             fetch('content.json')
             .then(function(response) { return response.json(); })
             .then(function(data) {
-                var currentContent = document.getElementById('content').innerText;
+                var currentContent = document.getElementById('content').innerHTML; // Use innerHTML
                 if (data.content !== currentContent) {
-                    document.getElementById('content').innerText = data.content;
+                    document.getElementById('content').innerHTML = data.content; // Set HTML content
                 }
             });
         }
