@@ -41,6 +41,10 @@ p {
     color: #FFF;
 }
 
+footer p {
+    color: #000;
+}
+
 section#presentation {
     display: flex;
     flex-direction: column;

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/display/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Service</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/display/style.css">
     <style>
        
         .back-button {
@@ -51,7 +52,7 @@
     </footer>
     <script>
         function updateContent() {
-            fetch('content.json')
+            fetch('/display/content.json')
             .then(function(response) { return response.json(); })
             .then(function(data) {
                 var currentContent = document.getElementById('content').innerText;

@@ -117,24 +117,27 @@ public class StaticFileHandler implements HttpHandler {
             respond(exchange, 400, "Bad Request");
             return;
         }
-        
-        // Serve 'index.html' for root or specified directory displays
-        List<String> indexPages = Arrays.asList("/", "/display", "/mantra");
-        if (indexPages.contains(requestedFile) || new File(root + requestedFile).isDirectory()) {
-            requestedFile = requestedFile + "/index.html";
-        }
-        
+
+        // Is this a standard file? If so, just serve it
         File file = new File(root, requestedFile);
-        sendFile(exchange, file);
-    }
-    
-    private void handleAPIRequest(HttpExchange exchange) {
-        String endpoint = exchange.getRequestURI().getPath();
-        List<String> endpoints = Arrays.asList("/display", "/mantra");
-        if (!endpoints.contains(endpoint)) {
-            System.out.println("Unhandled endpoint: " + endpoint);
+        if (file.isFile()) {
+            sendFile(exchange, file);
             return;
         }
+
+        // Serve 'index.html' for root or specified directory displays
+        requestedFile += "/index.html";
+        file = new File(root, requestedFile);
+        if (file.isFile()) {
+            sendFile(exchange, file);
+            return;
+        }
+
+        respond(exchange, 404, "Not Found");
+    }
+
+    private void handleAPIRequest(HttpExchange exchange) {
+        String endpoint = exchange.getRequestURI().getPath();
         
         File file;
         String newContent = "";
@@ -145,13 +148,11 @@ public class StaticFileHandler implements HttpHandler {
                 newContent = "{ \"content\":\"" + update + "\" }";
                 file = new File(root, "/display/content.json");
                 saveContentToFile(file, newContent);
-                handleFile(exchange);
                 break;
             case "/mantra":
-                newContent = "{ \"content\":\"" + update + "\" }";
+                newContent = "{ \"content\": \"" + update + "\" }";
                 file = new File(root, "/mantra/content.json");
                 saveContentToFile(file, newContent);
-                handleFile(exchange);
                 break;
             default:
                 break;
@@ -162,10 +163,7 @@ public class StaticFileHandler implements HttpHandler {
     public void handle(HttpExchange exchange) {
         queryParams = parseQueryParams(exchange);
         hasQueryParams = !queryParams.isEmpty();
-        if (hasQueryParams) {
-            handleAPIRequest(exchange);
-        } else {
-            handleFile(exchange);
-        }
+        if (hasQueryParams) { handleAPIRequest(exchange); }
+        handleFile(exchange);
     }
 }
