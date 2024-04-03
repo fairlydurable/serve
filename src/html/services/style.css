@@ -1,0 +1,125 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+p a {
+    color: #333;
+    text-decoration: inherit;
+}
+
+h2 a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+header {
+    background: url('/images/services.jpeg') no-repeat center center / cover;
+    color: #fff;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+}
+
+main {
+    padding: 20px;
+    margin: -20px auto; 
+    border: 70px solid black; 
+    background-color: #d4d4d4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 20px;
+    padding: 20px; 
+    background-color: #d4d4d4;
+}
+
+article h2 {
+    color: #998FF8;
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+article {
+    font-size: 1.2rem;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border: 2px solid #fff; 
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    min-height: 400px;
+    transition: transform 0.3s ease-in-out;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.intro p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.outro p {
+    max-width: 1200px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.outro pre {
+    max-width: 900px;
+    font-size: 1.0rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header, footer {
+    color: #fff;
+    background-color: #333; 
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    margin-top: 20px;
+    border-top: 5px solid black; 
+}

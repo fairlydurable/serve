@@ -3,110 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial Services</title>
+    <title>Temporal Discovery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>Tutorial Services</h1>
-        </div>
-    </header>
     <main>
+        <nav aria-label="Main" class="navbar navbar--fixed-top">
+            <div class="navbar__inner">
+                <div class="navbar__items">
+                    <a href="https://temporal.io" target="_blank" rel="noopener noreferrer" class="navbar__brand">
+                        <div class="navbar__logo">
+                            <img src="/images/temporal-logo-dark.svg" alt="Temporal logo" class="themedComponent_mlkZ themedComponent--light_NVdE">
+                        </div>
+                    </a>
+                    <a class="navbar__item navbar__link" href="/">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://learn.temporal.io/getting_started/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link" right="left">
+                        Temporal University - In-House Courses
+                        <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU">
+                            <path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path>
+                        </svg>
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="navbar__item navbar__link" right="left" href="/dev-guide">Start Building</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="navbar__item navbar__link" right="left" href="/dev-guide">Temporal CLI</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="navbar__item navbar__link" right="left" href="/dev-guide">Encyclopedia</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="navbar__item navbar__link" href="/cloud">Temporal Cloud</a>
+                </div>
+            </div>
+            <div role="presentation" class="navbar-sidebar__backdrop"></div>
+        </nav>
+        <br />
+        <header>
+        </header>
         <section class="intro">
-            <p>Expand the way you learn about Temporal with these browser-based inspection and interaction services. These services extend beyond the standard Temporal Server Web UI to support learning and engagement. Crafted specifically for tutorial use, they enable you to explore developer features in a safe and transparent environment. You can run these locally using 'localhost' (127.0.0.1), or host them on your favorite sites or droplets.</p>
+            <div class="header-content">
+                <h1>Temporal Discovery</h1>
+            </div>
         </section>
-
-            <section id="services">
-                <a href="display/" style="text-decoration: none; color: inherit;">
-                    <article>
-                        <h2>Message Display</h2>
-                        <p>A simple billboard display that updates its Markdown-based content using remote API calls. Perfect for exploring scheduled tasks or providing insight into Workflow state.</p>
-                    </article>
-                </a>
-                <a href="log/" style="text-decoration: none; color: inherit;">
-                    <article>
-                        <h2>Action Log</h2>
-                        <p>An API-controlled log, with the newest updates always at the top. Create output external to your Workflows to track information you wouldn't normally see in the Web UI or want to query, such as Activity Retries.</p>
-                    </article>
-                </a>
-                <a href="human/" style="text-decoration: none; color: inherit;">
-                    <article>
-                        <h2>Human-in-the-Loop</h2>
-                        <p>Explore how you add human intervention for a Workflow to proceed. This microservice provides a friendly button along with a prompt you set. It can't succeed without direct human interaction.</p>
-                    </article>
-                </a>
-                <a href="textentry/" style="text-decoration: none; color: inherit;">
-                    <article>
-                        <h2>Human-Sourced Text Entry</h2>
-                        <p>This microservice uses a text entry field with a prompt you set plus a submit/cancel button pair.</p>
-                    </article>
-                </a>
-                <a href="unreliable/" style="text-decoration: none; color: inherit;">
-                    <article>
-                        <h2>Unreliable Microservice</h2>
-                        <p>Tunes a microserve so its reliability ranges from 0.0 (always fails) to 1.0 (always succeeds). Learn to build activity retry policies using an endpoint whose characteristics you control. Built around Error 418 ("I'm a teapot") so this is the "coffee" service.</p>
-                    </article>
-                </a>
-                <a href="keyvalue/" style="text-decoration: none; color: inherit;">
-                    <article>
-                        <h2>Key-Value Store</h2>
-                        <p>Use get, set, and delete with this simple key-value CRUD database</p>
-                    </article>
-                </a>
-                <a href="chain/" style="text-decoration: none; color: inherit;">
-                    <article>
-                        <h2>Chain Service</h2>
-                        <p>Explore how a process moves forward by calling an n-stage chain of microservice activities. You set the base chain length, the delay timing, and update the progress using API calls. An AJAX-driven Mermaid-based graphic shows the progression of your Workflow through the chain as each Activity enters, retries, and succeeds.</p>
-                    </article>
-                </a>
-                <a href="progress/" style="text-decoration: none; color: inherit;">
-                    <article>
-                        <h2>Progress Service</h2>
-                        <p>Explore how a process moves forward with arbitrary microservice activities. You add links using API calls. A Mermaid-based graphic shows the progression of your Workflow through the chain as each Activity enters, retries, and succeeds.</p>
-                    </article>
-                </a>
-                <a href="json/" style="text-decoration: none; color: inherit;">
-                    <article>
-                        <h2>JSON Service</h2>
-                        <p>Until otherwise determined, the public domain Pokemon database, supplying JSON-formatted responses</p>
-                    </article>
-                </a>
-                <a href="coinflip/" style="text-decoration: none; color: inherit;">
-                    <article>
-                        <h2>Coinflip Service</h2>
-                        <p>Exactly what it says on the package.</p>
-                    </article>
-                </a>
-                <a href="http://146.190.45.234:8080">
-                <!-- a href="passive/" style="text-decoration: none; color: inherit;" -->
-                    <article>
-                        <h2>Passive IP Service</h2>
-                        <p>Retrieves visitor IP to seed a chain that is sent back with AJAX loading. This is the backbone for the Weather service currently hosted at our Digital Ocean droplet, currently linked instead of a page. (http://146.190.45.234:8080)</p>
-                    </article>
-                </a>
-                <a href="mantra/" style="text-decoration: none; color: inherit;">
-                    <article>
-                        <h2>Mantra Service</h2>
-                        <p>Similar to the Message Display Service, this service offers a stylized look with the same endpoint behavior. It's to be used with the signals, queries, and schedules samples and has a built-in "mantra" set of daily aphorisms.</p>
-                    </article>
-                </a>
-                <a href="support/" style="text-decoration: none; color: inherit;">
-                    <article>
-                        <h2>Services Support</h2>
-                        <p>How-to details, documentation, and other information about the API endpoints that power these services.</p>
-                    </article>
-                </a>
-            </section>
-            <section class="outro">
-                <p>All services accept standard query values, enabling you to set response conditions from calling apps:
-                <pre>
-                    ?reliablility=value-from-0.0-to-1.0
-                    ?delay=value-in-seconds
-                </pre>
+        <section id="features">
+            <article>
+                 <h2>Zero to Temporal Cloud</h2>
+                 <p>Step in to Temporal the easy way. This interactive book answers "Why Temporal?". It combine training and explanation with exploratory learning using simple hands-on projects as a basis for your own discovery.<br /><br /> You'll set up  development environments for local and Cloud-hosted deployment, customize your tooling for the best development experience, and build core applications with complete (if simple) feature sets that introduce a single concept at a time. From working apps to Worker farms, these lessons establish your grounding.</p>
+                 <br />
+                 <p>Once completed, you'll be ready to start learning real-world production-level topics for developing performant Temporal-based solutions at scale.</p>
+                 <br /><br /><br />
+                 <ul class="landing-card-list-b logos mb-4">
+                     <li class="list-logo">
+                         <a href="/dev-guide/go">
+                             <img class="w-10 h-8 pr-1 transition hover:scale-110 code-logo" src="/images/golang.svg" alt="Go lang logo">
+                         </a>
+                     </li>
+                     <li class="list-logo">
+                         <a href="/dev-guide/java">
+                             <img class="w-7 h-7 pr-1 transition hover:scale-110 code-logo" src="/images/java.svg" alt="Java logo">
+                         </a>
+                     </li>
+                     <li class="list-logo">
+                         <a href="/dev-guide/python">
+                             <img class="w-7 h-7 pr-1 transition hover:scale-110 code-logo" src="/images/python.svg" alt="Python logo">
+                         </a>
+                     </li>
+                     <li class="list-logo">
+                         <a href="/dev-guide/typescript">
+                             <img class="w-7 h-7 pr-1 transition hover:scale-110 code-logo" src="/images/typescript.svg" alt="TypeScript logo">
+                         </a>
+                     </li>
+                     <li class="list-logo">
+                         <a href="/dev-guide/php">
+                             <img class="w-10 pr-1 transition hover:scale-110 code-logo" src="/images/php.svg" alt="php logo">
+                         </a>
+                     </li>
+                     <li class="list-logo">
+                         <a href="https://github.com/temporalio/sdk-dotnet#readme">
+                             <img class="w-10 pr-1 transition hover:scale-110 code-logo" src="/images/dotnet.svg" alt=".Net logo">
+                         </a>
+                     </li>
+                 </ul>
+             </article>
+            <article>
+                <h2>Developer Guidebook</h2>
+                <p>Learn and explore Temporal: feature-by-feature using your preferred languages and development environments.<br /><br />Dive into feature guides that start with Foundations, and move onto the Core Concepts you need to succeed:
                 </p>
-            </section>
-        </main>
+                <br />
+                <ul>
+                    <li>Develop for durability</li>
+                    <li>Add tests</li>
+                    <li>Build observability</li>
+                    <li>Support converters and codecs</li>
+                    <li>Introduce Signals and Queries</li>
+                    <li>Improve throughput</li>
+                    <li>Performance, performance, performance</li>
+                    <li>Version your work</li>
+                    <li>etc</li>
+                </ul>
+                <br />
+                <ul class="landing-card-list-b logos mb-4">
+                    <li class="list-logo">
+                        <a href="/dev-guide/go">
+                            <img class="w-10 h-8 pr-1 transition hover:scale-110 code-logo" src="/images/golang.svg" alt="Go lang logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="/dev-guide/java">
+                            <img class="w-7 h-7 pr-1 transition hover:scale-110 code-logo" src="/images/java.svg" alt="Java logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="/dev-guide/python">
+                            <img class="w-7 h-7 pr-1 transition hover:scale-110 code-logo" src="/images/python.svg" alt="Python logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="/dev-guide/typescript">
+                            <img class="w-7 h-7 pr-1 transition hover:scale-110 code-logo" src="/images/typescript.svg" alt="TypeScript logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="/dev-guide/php">
+                            <img class="w-10 pr-1 transition hover:scale-110 code-logo" src="/images/php.svg" alt="php logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="https://github.com/temporalio/sdk-dotnet#readme">
+                            <img class="w-10 pr-1 transition hover:scale-110 code-logo" src="/images/dotnet.svg" alt=".Net logo">
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <!--
+            <article>
+                <h2>Temporal University</h2>
+                <p>Sign up for selections from our full and varied course catalog. Dive in with self-paced in-depth online courses that provide classroom-style hands-on learning experiences.</p>
+                <br />
+                <ul>
+                    <li> Temporal 101: Introducing the Temporal Platform</li>
+                    <li> Temporal 102: Exploring Durable Execution</li>
+                    <li> Temporal 201: Improving Application Performance</li>
+                    <li> Temporal 301: Securing Temporal Applications</li>
+                    <li> Temporal 404: Operating Temporal Clusters</li>
+                    <li> Temporal 210: Improving Application Performance</li>
+                    <li> Versioning Workflows</li>
+                    <li> Introduction to Temporal Cloud</li>
+                    <li> Crafting an Error Handling Strategy</li>
+                    <li> Interacting with Workflows (Part 1) </li>
+                    <li> Interacting with Workflows (Part 2) </li>
+                    <li> Build Applications with Temporal at the Core </li>
+                    <li> Temporal In Your Application </li>
+                    <li> And more!</li>
+                </ul>
+                <br />
+                <ul class="landing-card-list-b logos mb-4">
+                    <li class="list-logo">
+                        <a href="/dev-guide/go">
+                            <img class="w-10 h-8 pr-1 transition hover:scale-110 code-logo" src="/images/golang.svg" alt="Go lang logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="/dev-guide/java">
+                            <img class="w-7 h-7 pr-1 transition hover:scale-110 code-logo" src="/images/java.svg" alt="Java logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="/dev-guide/python">
+                            <img class="w-7 h-7 pr-1 transition hover:scale-110 code-logo" src="/images/python.svg" alt="Python logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="/dev-guide/typescript">
+                            <img class="w-7 h-7 pr-1 transition hover:scale-110 code-logo" src="/images/typescript.svg" alt="TypeScript logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="/dev-guide/php">
+                            <img class="w-10 pr-1 transition hover:scale-110 code-logo" src="/images/php.svg" alt="php logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="https://github.com/temporalio/sdk-dotnet#readme">
+                            <img class="w-10 pr-1 transition hover:scale-110 code-logo" src="/images/dotnet.svg" alt=".Net logo">
+                        </a>
+                    </li>
+                </ul>
+
+            </article>
+            -->
+            <article>
+                <h2>Let's Build It!</h2>
+                <p>Learn patterns and develop solutions with these step-by-step how-to spotlights and understand the real-world scenarios that drive these usage patterns.</p>
+                <br />
+                <ul>
+                <li>Building <b>lifecycle</b> applications</li>
+                <li>Building <b>operational</b> applications</li>
+                <li>Building <b>process</b> applications</li>
+                </ul>
+                <br />
+                <p> <b>Topics</b>: Payment Processing, Money Movement, Order Management, Bookings, Payment Gateway, Shopping Cart, Logistics Management, Customer Service, Customer Notifications, Marketing Campaigns, Supply Chain, Inventory Management, Menu/listing Versioning, User Management, Customer Lifecycle, Subscription Lifecycle, Inventory, Intras Worker Services, Saas Provisioning, Software Provisioning, Server Provisioning, Software Upgrades, Compute Optimization, Data Pipeline, ETL...
+                <br /><br />
+                <ul class="landing-card-list-b logos mb-4">
+                    <li class="list-logo">
+                        <a href="/dev-guide/go">
+                            <img class="w-10 h-8 pr-1 transition hover:scale-110 code-logo" src="/images/golang.svg" alt="Go lang logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="/dev-guide/java">
+                            <img class="w-7 h-7 pr-1 transition hover:scale-110 code-logo" src="/images/java.svg" alt="Java logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="/dev-guide/python">
+                            <img class="w-7 h-7 pr-1 transition hover:scale-110 code-logo" src="/images/python.svg" alt="Python logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="/dev-guide/typescript">
+                            <img class="w-7 h-7 pr-1 transition hover:scale-110 code-logo" src="/images/typescript.svg" alt="TypeScript logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="/dev-guide/php">
+                            <img class="w-10 pr-1 transition hover:scale-110 code-logo" src="/images/php.svg" alt="php logo">
+                        </a>
+                    </li>
+                    <li class="list-logo">
+                        <a href="https://github.com/temporalio/sdk-dotnet#readme">
+                            <img class="w-10 pr-1 transition hover:scale-110 code-logo" src="/images/dotnet.svg" alt=".Net logo">
+                        </a>
+                    </li>
+                </ul>
+
+            </article>
+            <article>
+                <h2>Services-to-Order</h2>
+                <p>Pre-built microservices, utilities, and data stores that get you up, running, exploring, testing, and learning without having to rely on third party or external systems.<br /><br />Run on your system (localhost), deploy to your favorite cloud, or use our ready-to-connect Discover.Temporal.io endpoint gateway.</p>
+                <br />
+                <ul>
+                    <li><b>Displays and Logs</b>: Text display APIs</li>
+                    <li><b>Human-in-the-Loop</b>: Buttons, Text Entry Fields...</li>
+                    <li><b>Tunable Microservices</b>: Set the number of stages</li>
+                    <li><b>Simple Key-Value Stores</b>: A little learning database</li>
+                    <li><b>JSON Query Sources</b>: Serves JSON content for project consumption</li>
+                    <li><b>Animated Progress</b>: with Mermaid Diagrams</li>
+                </ul>
+                <br /><br />
+                <p><b><i>All our services let you tune their reliablity and response times so you can exercize your solutions in a safe, controlled environment.</i></b></p>
+            </article>
+            <!--
+            <article>
+                <h2>Temporal Technologies</h2>
+                <center><img src="/images/Temporal_Symbol_dark.svg" width="300"></center>
+            </article>
+            <article>
+                <h2>Docs and Learning Support Pages</h2>
+                <ul>
+                    <li> <b>Blog</b>: Announcements and updates </li>
+                    <li> <b>Real world reports</b>: Learning stories and successes</li>
+                    <li> <b>Support Repositories</b></li>
+                    <li> <b>Utilities and Scripts</b></li>
+                    <li> <b>API Endpoint Documentation</b></li>
+                    <br />
+                    <li> And more!</li>
+                </ul>
+            </article>
+            -->
+        </section>
+    </main>
     <footer>
         <p>© 2024 Temporal</p>
     </footer>
